@@ -1,0 +1,376 @@
+
+ @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400");
+
+  *,
+  *::before,
+  *::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+
+
+:root {
+  --primary-color: hsl(0, 0%, 0%);
+  --primary-color-alt: hsl(0, 100%, 37%);
+  --second-color: #3e537c;
+  --second-color-alt: hsla(220, 33%, 36%, 65%);
+  --third-color: hsl(220, 36%, 28%);
+  --white-color: #ffffff;
+  --white-color-alt: hsl(12, 14%, 93%);
+  --dark-color: hsl(300, 100%, 0%);
+}
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  
+  /* Navigation Styles */
+
+    body {
+    font-family: "Raleway", sans-serif;
+    font-size: 1rem;
+    background-image: url(table.png);
+  }
+ 
+  
+  li {
+    list-style: none;
+  }
+  a {
+    text-decoration: none;
+  }
+  img {
+    width: 100%;
+    height: auto;
+  }
+  .bx {
+    font-size: 2.5rem;
+  }
+  .container {
+    padding: 0 2rem;
+  }
+  
+ h1{
+  
+  text-align: center;
+ } 
+  
+ 
+ .discussion-form{
+  background-color: rgb(177, 158, 98);
+  width: 50%;
+  position: relative;
+  left: 300px;
+  
+ }
+
+ .commentss{
+  background-color: rgba(172, 155, 99, 0.411);
+  width: 70%;
+  position: relative;
+  left: 200px;
+ }
+
+  
+  .discussion-threads{
+    width: 50%;
+    position: relative;
+    left: 100px;
+    background-color: rgba(172, 155, 99, 0.411);
+   }
+  
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--dark-color);
+    padding: 1rem 2rem;
+  }
+  
+  .nav-items {
+    display: flex;
+  }
+  .nav-item {
+    margin: 0 2rem;
+  }
+  .nav-link {
+    font-size: 1.1rem;
+    letter-spacing: 0.05rem;
+    position: relative;
+    background: -webkit-linear-gradient(
+      var(--white-color-alt),
+      var(--white-color)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .nav-link::before {
+    content: "";
+    background: linear-gradient(var(--primary-color), var(--primary-color-alt));
+    width: 100%;
+    height: 0.05rem;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 150ms;
+  }
+  .nav-link:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  .Welcome{
+      width: 800px;
+  }
+  
+  
+  .slogan .company-slogan {
+    background: -webkit-linear-gradient(
+      120deg,
+      var(--primary-color-alt),
+      var(--primary-color)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: 10px;
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.8rem;
+  }
+ 
+  
+  @media screen and (max-width: 768px) {
+    .container {
+      padding: 0 1rem;
+    }
+  
+    header {
+      padding: 0.5rem 1rem;
+    }
+    .navbar {
+      background-color: var(--dark-color);
+      position: absolute;
+      top: 3.5rem;
+      right: 0;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      transform: scaleY(0);
+      transform-origin: bottom;
+      transition: transform 500ms;
+    }
+    .show-navbar {
+      display: flex;
+      transform: scaleY(1);
+      transform-origin: top;
+      transition: transform 300ms;
+    }
+    .nav-items {
+      display: flex;
+      flex-direction: column;
+    }
+    .nav-item {
+      margin: 0.5rem 0;
+    }
+    .menu-toggle {
+      display: block;
+    }
+  
+  
+  }
+  @media (min-width: 769px) {}
+    header {
+      padding: 1rem 5rem;
+    }
+  
+
+    .section-1 {
+      justify-content: space-between;
+      grid-template-columns: 1fr 1fr;
+      padding: 2rem 5rem 0 5rem;
+    }
+    .slogan .company-title {
+      max-width: 30rem;
+      font-size: 1.8rem;
+      letter-spacing: 0.5rem;
+    }
+    .slogan .company-slogan {
+      max-width: 20rem;
+      font-size: 1.3rem;
+    }
+  
+    .section-1 {
+    background-image: url(table.png);
+    background-size: cover;
+    max-width: 3000px;
+    display: grid;
+  
+  }
+  
+  /* Main Content Styles */
+  main {
+    padding: 20px;
+    background-color: #bba16a; 
+  }
+  
+  
+  .discussion-form {
+    margin-bottom: 20px; 
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  form label {
+    margin-bottom: 5px;
+    text-align: center; /* Center the label text */
+  }
+  
+  form input[type="text"] {
+    width: 100%;
+    max-width: 300px; /* Limit username input to a maximum of 32 characters */
+    padding: 5px;
+    margin-bottom: 10px;
+  }
+  
+  form textarea {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+  }
+  
+  form button {
+    padding: 8px 20px;
+    background-color: #dda733;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Discussion Threads Styles */
+  .discussion-threads {
+    margin-top: 20px; /* Add spacing between threads and footer */
+  }
+  
+  .thread {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .user-info {
+    margin-right: 10px;
+  }
+  
+  .user-info img {
+    width: 40px; /* Adjust the size of profile pictures */
+    height: 40px; /* Adjust the size of profile pictures */
+    border-radius: 50%;
+  }
+  
+  .thread-content {
+    flex: 1;
+  }
+  
+  .thread-content h3 {
+    margin-bottom: 5px;
+  }
+  
+  .thread-content p {
+    margin-bottom: 10px;
+  }
+  
+  .thread-content a {
+    color: #3a3937;
+  }
+  
+  /* Report Post Widget */
+  .report-widget {
+    margin-left: auto;
+    margin-right: 0; /* Ensure the widget is aligned to the right */
+  }
+  
+  /* Footer Styles */
+  footer {
+    background-color: #454647; /* Blue color for the footer */
+    padding: 10px;
+    text-align: center;
+    color: white;
+  }
+  /* Additional CSS for Pseudo-Moderation Tools */
+.replies {
+    display: none;
+    margin-top: 10px;
+    padding-left: 30px;
+  }
+  
+  .expand-btn {
+    color: #3b3b3b;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  
+  .mod-tools {
+    display: none;
+    margin-top: 10px;
+  }
+  
+  .mod-tools a {
+    margin-right: 10px;
+    color: #e74c3c;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  
+  /* Additional CSS for Interactive Elements */
+  .show-replies .replies {
+    display: block;
+  }
+  
+  .show-mod-tools .mod-tools {
+    display: block;
+  }
+
+.reply-textarea{
+  width: 90%;
+    padding: 12px 0;
+    outline: none;
+    border: 1px solid rgba(0,0,0, 0.2);
+    .helvetica;
+    color: white;
+    .border-radius(4px);
+    
+}
+
+245);
+    height: 100%;
+    color: rgb(100, 108, 127);
+    line-height: 1.4rem;
+    font-family: Roboto, "Open Sans", sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    text-rendering: optimizeLegibility;
+}
+
+h1 { text-align: center; }
+
+.dropzone {
+    background: white;
+    border-radius: 5px;
+    border: 2px dashed rgb(0, 135, 247);
+    border-image: none;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}

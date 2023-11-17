@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="TimetableStyle.css">
+    <title>Timetable</title>
+    <style>
+        .clock {
+            text-align: center;
+            font-size: 2rem;
+            margin: 20px 0;
+        }
+        body {
+            background-image: url("time.jpg"); 
+            background-repeat: no-repeat;
+            background-size: cover; 
+            background-position: center; 
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img class="home-computer" src="Picture1.png">
+        <nav class="navbar">
+            <ul class="nav-items">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="about us.html" class="nav-link">About us</a></li>
+                <li class="nav-item"><a href="timetable.html" class="nav-link">Timetable</a></li>
+                <li class="nav-item"><a href="contact us.html" class="nav-link">Contact us</a></li>
+                <li class="nav-item"><a href="discussion.html" class="nav-link">Discussion</a></li>
+                <li class="nav-item"><a href="share resources.html" class="nav-link">Share Resources</a></li>
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+                <link rel="stylesheet" href="TimetableStyle.css">
+            </ul>
+        </nav>
+    </header>
+    <div class="time">
+        <div class="clock">
+            <p id="digital-clock"></p>
+        </div>
+        <div class="clock-container">
+            <p id="digital-clock"></p>
+            <i id="bell-icon" class="fas fa-bell"></i>
+        </div>
+        <h1 style="text-align: center;">Student Timetable</h1>
+        <p style="text-align: center;">To ensure that you stay on top of your work, and that it does not swallow you whole.</p>
+        <div class="timetable">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>Monday</th>
+                        <th>Tuesday</th>
+                        <th>Wednesday</th>
+                        <th>Thursday</th>
+                        <th>Friday</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>9:00</td>
+                        <td class="subject CWD">Web Development</td>
+                        <td class="subject CF">Cloud Fundamentals</td>
+                        <td class="subject RD">Robotics</td>
+                        <td class="subject ENA">Ethics</td>
+                        <td class="subject CA">Computer Architecture</td>
+                    </tr>
+                    <tr>
+                        <td>10:00</td>
+                        <td class="subject CF">Cloud Fundamentals</td>
+                        <td class="subject RD">Robotics</td>
+                        <td class="subject CWD">Web Development</td>
+                        <td class="subject CA">Computer Architecture</td>
+                        <td class="subject ENA">Ethics</td>
+                    </tr>
+                    <tr>
+                        <td>11:00</td>
+                        <td class="subject CF">Cloud Fundamentals</td>
+                        <td class="subject RD">Robotics</td>
+                        <td class="subject ENA">Ethics</td>
+                        <td class="subject CA">Computer Architecture</td>
+                        <td class="subject CWD">Web Development</td>
+                    </tr>
+                    <tr>
+                        <td>12:00</td>
+                        <td class="subject RD">Robotics</td>
+                        <td class="subject CA">Computer Architecture</td>
+                        <td class="subject CWD">Web Development</td>
+                        <td class="subject ENA">Ethics</td>
+                        <td class="subject CF">Cloud Fundamentals</td>
+                    </tr>
+                    <tr>
+                        <td>13:00</td>
+                        <td class="subject RD">Robotics</td>
+                        <td class="subject ENA">Ethics</td>
+                        <td class="subject CF">Cloud Fundamentals</td>
+                        <td class="subject CWD">Web Development</td>
+                        <td class="subject CA">Computer Architecture</td>
+                    </tr>
+                    <tr>
+                        <td>14:00</td>
+                        <td class="subject CWD">Web Development</td>
+                        <td class="subject CF">Cloud Fundamentals</td>
+                        <td class="subject RD">Robotics</td>
+                        <td class="subject CA">Computer Architecture</td>
+                        <td class="subject ENA">Ethics</td>
+                    </tr>
+                    <tr>
+                        <td>15:00</td>
+                        <td class="subject RD">Robotics</td>
+                        <td class="subject ENA">Ethics</td>
+                        <td class="subject CWD">Web Development</td>
+                        <td class="subject CF">Cloud Fundamentals</td>
+                        <td class="subject CA">Computer Architecture</td>
+                    </tr>
+                    <tr>
+                        <td>16:00</td>
+                        <td class="subject RD">Robotics</td>
+                        <td class="subject CF">Cloud Fundamentals</td>
+                        <td class="subject CWD">Web Development</td>
+                        <td class="subject CA">Computer Architecture</td>
+                        <td class="subject ENA">Ethics</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="TimetableJS.js"></script>
+    <script>
+        function updateClock() {
+            const now = new Date();
+            const hours = now.getHours().toString().padStart(2, '0');
+            const minutes = now.getMinutes().toString().padStart(2, '0');
+            const seconds = now.getSeconds().toString().padStart(2, '0');
+            const timeString = `${hours}:${minutes}:${seconds}`;
+            document.getElementById('digital-clock').textContent = timeString;
+        }
+
+        setInterval(updateClock, 1000);
+
+        updateClock();
+
+        <div class="clock">
+            <p id="digital-clock"></p>
+            <div class="bell-container" id="bell-container">
+                <i class="fas fa-bell" id="bell-icon"></i>
+            </div>
+    <div id="print-message" style="display: none;">Timetable has been printed and exported for offline use.</div>
+        
+        </div>
+    </script>
+
+    <button id="add-class-button" onclick="addClass()">Add Class</button>
+    <button id="print-button">Print Timetable</button>
+
+    <footer>
+        <h3 style="text-align: center;">Runtime Terror™ 2023</h3>
+    </footer>
+
+    <script>
+document.addEventListener("DOMContentLoaded", function () {
+    const subjects = document.querySelectorAll(".subject");
+
+    subjects.forEach(subject => {
+        subject.addEventListener("mouseenter", () => {
+            const subjectText = subject.textContent.trim();
+            let imagePath;
+
+            switch (subjectText) {
+                case "Cloud Fundamentals":
+                    imagePath = 'url("CF.jpg")';
+                    break;
+                case "Robotics":
+                    imagePath = 'url("RD.jpg")';
+                    break;
+                case "Web Development":
+                    imagePath = 'url("CWD.jpg")';
+                    break;
+                case "Ethics":
+                    imagePath = 'url("ENA.jpg")';
+                case "Computer Architecture":
+                    imagePath = 'url("CA.jpg")';
+                    break;
+                default:
+                    imagePath = 'none';
+            }
+
+            document.body.style.backgroundImage = imagePath;
+        });
+
+        subject.addEventListener("mouseleave", () => {
+            document.body.style.backgroundImage = 'url("time.jpg")';
+        });
+    });
+});
+
+    </script>
+
+    <script>
+
+        document.getElementById('print-button').addEventListener('click', function() {
+
+            var isConfirmed = window.confirm('Are you sure you want to print the timetable?');
+
+            if (isConfirmed) {
+
+                alert('Timetable has been printed and exported for offline use.');
+
+                window.print();
+            }
+        });
+
+    </script>
+
+ </body>
+</html>
+    
+
+
+
+

@@ -1,0 +1,428 @@
+<main>
+    <section class="resource">
+    <table><td><a href="#">  <img src="coding.png" alt="code" class="code">Web Development</a></li>
+            </td>
+     <td><p>Web development is the process of creating and maintaining websites and web applications. It involves designing, coding, and integrating various elements like HTML, CSS, JavaScript, and databases to build functional and visually appealing online platforms that users can access via web browsers.</p>
+</td></table>
+      <table><td>
+      <a href="#"><img src="server.png" alt="code" class="code">Cloud Fundementals</a></li>
+      </td>
+      <td>
+        Cloud fundamentals encompass the foundational concepts and technologies that underpin cloud computing. It involves understanding virtualization, scalability, on-demand resources, and services offered over the internet. Cloud fundamentals are crucial for leveraging the benefits of cloud platforms, such as flexibility, cost-efficiency, and accessibility to data and applications.
+      </td>
+    </table>
+    <table><td>
+     <a href="#"><img src="robot.png" alt="code" class="code">Robotics</a>
+    </td>
+     <td>
+        Robotics involves creating, designing, and operating robots. These are machines that can perform tasks autonomously or semi-autonomously, often mimicking human actions or functions. Robotics combines elements of engineering, programming, and mechanics to create intelligent machines capable of interacting with and manipulating the physical world.
+     </td>
+    </table>
+</table>
+<table><td>
+<a href="#"><img src="computer.png" alt="code" class="code">Computer Architecture</a>
+</td>
+ <td>
+    Computer architecture defines the structure and organization of a computer system. It encompasses the design of components like the CPU, memory, and input/output systems, focusing on how they interact to execute instructions. Computer architecture influences performance, efficiency, and compatibility in computing devices and systems.
+ </td>
+</table>
+</table>
+<table><td>
+ <a href="#"><img src="balance-scale.png" alt="code" class="code">Ethics</a>
+</td>
+ <td>
+    Ethics involves determining what is morally right and wrong, guiding human behavior and decision-making. It's a framework for evaluating actions and their impact on individuals, society, and the environment. Ethical principles provide guidelines for fairness, responsibility, and respect, shaping how we navigate complex moral dilemmas in various contexts.
+ </td>
+</table>   
+    </section>
+    <br>
+  <section class="image">
+<h2>Upload resources</h2>
+  <script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  <div class="file-upload">
+    <button class="file-upload-btn" type="button" onclick="$('.file-upload-input').trigger( 'click' )">Add Image</button>
+  
+    <div class="image-upload-wrap">
+      <input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
+      <div class="drag-text">
+        <h3>Drag and drop a file or select add Image</h3>
+      </div>
+    </div>
+    <div class="file-upload-content">
+      <img class="file-upload-image" src="#" alt="your image" />
+      <div class="image-title-wrap">
+        <button type="button" onclick="removeUpload()" class="remove-image">Remove <span class="image-title">Uploaded Image</span></button>
+      </div>
+    </div>
+  </div>
+  </section>
+  </main>
+  
+ <div class="css">
+
+  @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400");
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.code{
+width: 150px;
+display: flex;
+justify-content: center;
+margin: 50px auto;
+max-width: 900px;
+background-color: #f5f5f5;
+border: 10px solid #ddd;
+margin: 10px;
+padding: 20px;
+text-align: center;
+
+  }
+
+
+:root {
+  --primary-color: hsl(0, 0%, 0%);
+  --primary-color-alt: hsl(0, 100%, 37%);
+  --second-color: #3e537c;
+  --second-color-alt: hsla(220, 33%, 36%, 65%);
+  --third-color: hsl(220, 36%, 28%);
+  --white-color: #ffffff;
+  --white-color-alt: hsl(12, 14%, 93%);
+  --dark-color: hsl(0, 0%, 0%);
+}
+
+
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+.bx {
+  font-size: 2.5rem;
+}
+.container {
+  padding: 0 2rem;
+}
+
+
+body {
+  font-family: "Raleway", sans-serif;
+  font-size: 1rem;
+  background-color: rgb(221, 154, 86);
+}
+
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--dark-color);
+  padding: 1rem 2rem;
+}
+
+.nav-items {
+  display: flex;
+}
+.nav-item {
+  margin: 0 2rem;
+}
+.nav-link {
+  font-size: 1.1rem;
+  letter-spacing: 0.05rem;
+  position: relative;
+  background: -webkit-linear-gradient(
+    var(--white-color-alt),
+    var(--white-color)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.nav-link::before {
+  content: "";
+  background: linear-gradient(var(--primary-color), var(--primary-color-alt));
+  width: 100%;
+  height: 0.05rem;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 150ms;
+}
+.nav-link:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+.resource {
+    font-size: 1.1rem;
+    letter-spacing: 0.05rem;
+    position: relative;
+    background: -webkit-linear-gradient(
+      var(--dark-color),
+      var(--dark-color)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+.resource:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+.Welcome{
+    width: 800px;
+}
+
+.slogan .company-title {
+  background: -webkit-linear-gradient(
+    120deg,
+    var(--primary-color-alt),
+    var(--primary-color)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.slogan .company-slogan {
+  background: -webkit-linear-gradient(
+    120deg,
+    var(--primary-color-alt),
+    var(--primary-color)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.8rem;
+}
+.bx-x {
+  cursor: pointer;
+  background: -webkit-linear-gradient(
+    120deg,
+    var(--primary-color-alt),
+    var(--primary-color)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: none !important;
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  header {
+    padding: 0.5rem 1rem;
+  }
+  .navbar {
+    background-color: var(--dark-color);
+    position: absolute;
+    top: 3.5rem;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: transform 500ms;
+  }
+  .show-navbar {
+    display: flex;
+    transform: scaleY(1);
+    transform-origin: top;
+    transition: transform 300ms;
+  }
+  .nav-items {
+    display: flex;
+    flex-direction: column;
+  }
+  .nav-item {
+    margin: 0.5rem 0;
+  }
+  .menu-toggle {
+    display: block;
+  }
+
+
+}
+@media (min-width: 769px) {}
+  header {
+    padding: 1rem 5rem;
+  }
+section.card {
+  background:#f6f6f6;
+  border-radius:24px 24px 24px 48px;
+  padding:48px 48px 48px 308px;
+  margin:84px 0;
+  width:60vw;
+  max-width:920px;
+  min-width:640px;
+  display:flex;
+  flex-direction:row;
+  align-self:flex-start;
+  position:relative;
+  box-shadow:
+    5px 0 0 0 fade(#ccc,30%),
+    -5px 0 0 0 fade(#ccc,30%),
+    0 5px 0 0 fade(#ccc,30%);
+  .text-content {
+    display:flex;
+    flex-direction:column;
+    width:calc(60vw - 192px);
+    h3 {
+      margin:0;
+      font-size:1.5em;
+      max-width:20ch;
+    }
+    p {
+      margin:16px 0 24px;
+      max-width:36ch;
+    }
+    a {
+      border:3px solid #000;
+      color:#000;
+      align-self:flex-start;
+      text-decoration:none;
+      padding:16px 32px;
+      border-radius:12px;
+      transition:400ms all;
+      &:hover {
+        background:#000;
+        color:white
+      }
+    }
+  }
+  .visual {
+    width:240px;
+    height:100%;
+    position:absolute;
+    top:-24px;
+    left:24px; 
+    overflow:hidden;
+    border-radius:24px;
+    box-shadow:
+      1px 2px 6px fade(white,25%),
+      2px 6px 12px fade(black,25%);
+    img { 
+      height:110%
+    }
+  }
+  &:nth-of-type(odd) {
+    margin:0 0 0 248px;
+    border-radius:24px 24px 48px 24px;
+    padding:48px 308px 48px 60px;
+    .visual {
+      right:24px;
+      left:auto
+    }
+    .text-content a {
+      align-self:flex-start
+    }
+  }
+
+}
+
+article {
+  margin:auto;
+  display:block;
+  width:calc(60vw + 248px);
+  max-width:calc(920px + 248px);
+  min-width:calc(640px + 248px); 
+}
+
+body {
+  margin:0;
+  padding:96px;
+  font-size:21px;
+  background:#fff;
+  color:#000;
+  font-family: "gelica", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+} 
+
+@media all and (max-width:1100px) {
+  body {
+    padding:96px 48px 24px
+  }
+  article {
+    width:100%;
+    max-width:100%;
+    min-width:100%
+  }
+  section.card {
+    width:100%;
+    max-width:100%;
+    min-width:100%;
+    .text-content {
+      width:100%
+    }
+    &:nth-of-type(odd) {
+      margin:0
+    }
+  }
+}
+@media all and (max-width:720px) {
+  body {
+    padding:48px 24px 0
+  }
+  section.card {
+    margin:64px 0;
+    padding:88px 36px 36px;
+    flex-direction:column;
+    border-radius:24px;
+    &:nth-of-type(odd) {
+      padding:88px 36px 36px;
+      border-radius:24px;
+    } 
+    .text-content {
+      h3 { 
+        max-width:calc(100% - 150px);
+        font-size:1em
+      }
+      p,a {
+        font-size:0.8em
+      }
+    }
+    .visual,
+    &:nth-of-type(odd) .visual {
+      width:150px;
+      height:150px; 
+      right:16px;left:auto;
+      img {
+        width:100%;
+        height:auto
+      }
+    }
+  }
+}
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+ </div>

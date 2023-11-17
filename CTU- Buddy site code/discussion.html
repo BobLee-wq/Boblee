@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CTU-Buddy | Discussions</title>
+  <link rel="stylesheet" href="discussion.css">
+  <link rel="stylesheet" href="index.html">
+<link rel="stylesheet" href="login.html">
+<link rel="stylesheet" href="timetable.html">
+<link rel="stylesheet" href="contact us.html">
+<link rel="stylesheet" href="about us.html">
+<link rel="stylesheet" href="share resources.html">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+
+</head>
+<body>
+  <header> <img class="home-computer" src="Picture1.png">
+    <nav class="navbar">
+      <ul class="nav-items">
+        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="about us.html" class="nav-link">About us</a></li>
+        <li class="nav-item"><a href="timetable.html" class="nav-link">Timetable</a></li>
+        <li class="nav-item"><a href="contact us.html" class="nav-link">Contact us</a></li>
+        <li class="nav-item"><a href="login.html" class="nav-link">Discussion</a></li>
+        <li class="nav-item"><a href="share resources.html" class="nav-link">Share Resources</a></li>
+      </ul>
+    </nav>
+   
+  </header>
+
+  <main>
+    <section class="discussion-form">
+      <h2>Join the discussion</h2>
+      <form>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required maxlength="32">
+
+        <label for="question">Your Question:</label>
+        <textarea id="question" name="question" rows="4" required></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+
+    <section class="discussion-threads">
+      <h2>Discussion:</h2>
+    </section>
+    <br>
+    <div class="commentss">
+      <div class="thread">
+        <div class="user-info">
+          <img src="Aashiq.jpg" alt="User1">
+          <p>Bob Lee</p>
+        </div>
+        <div class="thread-content">
+          <h3>Question:</h3>
+          <p>Do you have on campus stores?</p>
+          <a href="#" class="expand-btn">View Replies</a>
+          <div class="replies">
+            <div class="user-info">
+              <img src="Salmaan.jpg" alt="User2">
+              <p>Salmaan</p>
+            </div>
+            <div class="reply-content">
+              <p>Yes, we have an area with multiple stores</p>
+            </div>
+          </div>
+          <div class="mod-tools">
+            <a href="#" class="report-btn">Report</a>
+            <a href="#" class="delete-btn">Delete</a>
+          </div>
+          <form class="reply-form">
+           
+            <textarea class="reply-textarea" rows="2" placeholder="Reply...."></textarea>
+            <button type="submit">Post Reply</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="thread">
+        <div class="user-info">
+          <img src="Salmaan.jpg" alt="User2">
+          <p>Salmaan</p>
+        </div>
+        <div class="thread-content">
+          <h3>Question:</h3>
+          <p>When is the schools open days?</p>
+          <a href="#" class="expand-btn">View Replies</a>
+          <div class="replies">
+            <div class="user-info">
+              <img src="Praise.jpg" alt="User2">
+              <p>Derius</p>
+            </div>
+            <div class="reply-content">
+              <p>We have 4 read out through the year, 2 between January and March and 2 between July and September</p>
+            </div>
+
+          </div>
+          <div class="mod-tools">
+            <a href="#" class="report-btn">Report</a>
+            <a href="#" class="delete-btn">Delete</a>
+          </div>
+          <form class="reply-form">
+            
+            <textarea class="reply-textarea" rows="2" placeholder="Reply...."></textarea>
+            <button type="submit">Post reply</button>
+          </form>
+        </div>
+      </div>
+      <!-- ... Add more existing threads as needed ... -->
+    </div>
+    
+  </main>
+
+  <footer>
+    <p>&copy; 2023 runtime terror | All rights reserved.</p>
+  </footer>
+
+  <script src="discussion.js"></script>
+</body>
+</html>

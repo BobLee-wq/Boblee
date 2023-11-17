@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="ContactUsStyle.css" />
+    <script src="contactUsJS.js"></script>
+    <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"
+    ></script>
+<link rel="stylesheet" href="index.html">
+<link rel="stylesheet" href="discussion.html">
+<link rel="stylesheet" href="timetable.html">
+<link rel="stylesheet" href="contact us.html">
+<link rel="stylesheet" href="about us.html">
+<link rel="stylesheet" href="share resources.html">
+
+  </head>
+  <body>
+
+    <header> <img class="home-computer" src="Picture1.png">
+      <nav class="navbar">
+        <ul class="nav-items">
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="about us.html" class="nav-link">About us</a></li>
+          <li class="nav-item"><a href="timetable.html" class="nav-link">Timetable</a></li>
+          <li class="nav-item"><a href="contact us.html" class="nav-link">Contact us</a></li>
+          <li class="nav-item"><a href="discussion.html" class="nav-link">Discussion</a></li>
+          <li class="nav-item"><a href="share resources.html" class="nav-link">Share Resources</a></li>
+        </ul>
+      </nav>
+    
+    </header>
+    <main>
+    <div class="container">
+      <span class="big-circle"></span>
+      <img src="shape.png" class="square" alt="" />
+      <div class="form">
+        <div class="contact-info">
+          <h3 class="title">Let's get in touch</h3>
+          <p class="text">
+            We love helping, so please make contact by using our listed platforms or message us directly.
+          </p>
+
+          <div class="info">
+            <div class="information">
+              <img src="location.png" class="icon" alt="" />
+              <p>36 Edgar Rd,<br> Eveleigh,<br> Boksburg,<br> 1459</p>
+            </div>
+            <div class="information">
+              <img src="email.png" class="icon" alt="" />
+              <p>CTU-Buddy@gmail.com</p>
+            </div>
+            <div class="information">
+              <img src="phone.png" class="icon" alt="" />
+              <p>123-456-7890</p>
+            </div>
+          </div>
+
+          <div class="social-media">
+            <p>Connect with us :</p>
+            <div class="social-icons">
+              <a href="https://www.facebook.com/CTUTrainingSolutions/">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="https://twitter.com/ctu_chatz?lang=en">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="https://www.instagram.com/ctutrainingsolutions/">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="https://za.linkedin.com/school/ctu-training-solutions-alumni/">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </div>
+          <div class=" group-members">
+            <h1>Group members</h1>
+            <p>Mohamed Aashiq Hartley</p>
+            <p>Praise Joseph</p>
+            <p>Salmaan Kazie</p>
+          </div>
+        </div>
+
+        <div class="contact-form">
+          <span class="circle one"></span>
+          <span class="circle two"></span>
+
+          <form action="processform.php" method="post">
+            <h3 class="title">Contact us</h3>
+            <div class="input-container">
+              <input type="text" name="fullname" class="input" id="fullname" placeholder="Fullname*" required autofocus oninput="hidePlaceholder('fullname')" onblur="showPlaceholder('fullname')">
+              <span>lFull name</span>
+            </div>
+            <div class="input-container">
+              <input type="text" name="email" class="input" id="email" placeholder="Email*" required autofocus oninput="hidePlaceholder('email')" onblur="showPlaceholder('email')">
+              <span>Email</span>
+            </div>
+            <div class="input-container">
+              <input type="text" name="phone" class="input" id="phone" placeholder="Phone Number*" required autofocus oninput="hidePlaceholder('phone')" onblur="showPlaceholder('phone')">
+              <span>Phone</span>
+            </div>
+            <div class="input-container textarea">
+              <textarea type="text" name="message" class="input" id="message" placeholder="Message*" required autofocus oninput="hidePlaceholder('message')" onblur="showPlaceholder('phone')"></textarea>
+              <span>Message</span>
+            </div>
+            <input type="submit" value="Send" class="btn" />
+          </form>
+          <div >
+            <h2 style="text-align: center;">Campus location</h2>
+            <p style="text-align: center;">Visit us in person at the following address</p>
+            <p style="text-align: center;"><a href="https://www.google.com/maps/place/CTU+Training+Solutions+Boksburg/@-26.1845951,28.2494114,17z/data=!3m1!4b1!4m6!3m5!1s0x1e9516f7cdf0e7e1:0xb6052309e286935a!8m2!3d-26.1845951!4d28.2519863!16s%2Fg%2F1hc3d22qz?entry=ttu" target="_blank"> Google Map</a></p>
+            <p class="Map"><img src="https://za.africabz.com/map/249369.png" alt="Campus Map"></p>
+          
+          </div>
+        </di>
+      </div>
+      <footer>Runtime Terror &copy;</footer>
+  </body>
+</html>

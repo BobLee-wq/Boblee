@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="share resources.css">
+<title>Share Resources</title>
+<link rel="stylesheet" href="index.html">
+<link rel="stylesheet" href="login.html">
+<link rel="stylesheet" href="timetable.html">
+<link rel="stylesheet" href="contact us.html">
+<link rel="stylesheet" href="about us.html">
+<link rel="stylesheet" href="login.html">
+<link rel="stylesheet" href="share resources.html">
+</head>
+<body>
+  <header>
+    <header> <img class="home-computer" src="Picture1.png">
+        <nav class="navbar">
+          <ul class="nav-items">
+            <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="about us.html" class="nav-link">About us</a></li>
+            <li class="nav-item"><a href="timetable.html" class="nav-link">Timetable</a></li>
+            <li class="nav-item"><a href="contact us.html" class="nav-link">Contact us</a></li>
+            <li class="nav-item"><a href="login.html" class="nav-link">Discussion</a></li>
+            <li class="nav-item"><a href="share resources.html" class="nav-link">Share Resources</a></li>
+          </ul>
+        </nav>
+       
+      </header> 
+  </header>
+
+  <table>
+    <th>
+        <td>
+             <h1>Share Resources</h1>
+             <br>
+  <h2 class="sg">Study guide</h2>
+  <br>
+  <h3>A study guide serves as an invaluable tool to effectively guide students through their academic journey. It condenses complex course material into manageable sections, providing a structured roadmap for learning. By highlighting key concepts, offering practice questions, and organizing information in a clear and concise manner, study guides empower students to focus on what truly matters for their exams. They promote efficient time management, helping students prioritize their study sessions and reduce information overload. Additionally, study guides facilitate active learning and self-assessment, enabling students to track their progress and identify areas that require further attention. In essence, a well-crafted study guide is a reliable companion that empowers students to navigate their coursework with confidence and achieve academic success.</h3>
+  <div class="share resource">
+    
+  </div>
+ 
+  <section class="ss">
+    
+
+    <br>
+<!--UPLOAD BUTTON-->
+<h1>Upload Files</h1>
+<p>Click on uploaded file to download it</p>
+<label for="file" class="upload-btn">Choose Files</label>
+<input type="file" id="file" style="display: none;" multiple onchange="handleFileUpload(this)">
+<div id="file-list" class="file-list"></div>
+
+<script>
+    const localStorageKey = 'fileUpload_' + window.location.pathname.replace(/\//g, ''); // Dynamically generate a unique key based on the page URL
+
+    function handleFileUpload(input) {
+        const fileListContainer = document.getElementById('file-list');
+
+        if (input.files.length > 0) {
+            const files = Array.from(input.files);
+
+            // Retrieve existing files from Local Storage
+            const storedFiles = JSON.parse(localStorage.getItem(localStorageKey)) || [];
+
+            // Process each file
+            files.forEach((file) => {
+                // Read the file content as a Data URL (Base64-encoded)
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    const fileData = e.target.result;
+
+                    // Add the new file data to the list
+                    storedFiles.push({
+                        name: file.name,
+                        type: file.type,
+                        data: fileData
+                    });
+
+                    // Save the updated file list to Local Storage
+                    localStorage.setItem(localStorageKey, JSON.stringify(storedFiles));
+
+                    // Display the list of uploaded files
+                    displayFileList(fileListContainer);
+                };
+
+                reader.readAsDataURL(file);
+            });
+        }
+    }
+
+    function displayFileList(container) {
+        container.innerHTML = '';
+
+        // Retrieve and parse stored file data when the page loads
+        const storedFiles = JSON.parse(localStorage.getItem(localStorageKey)) || [];
+
+        storedFiles.forEach((file, index) => {
+            const listItem = document.createElement('div');
+            listItem.classList.add('file-item');
+            listItem.innerHTML = `
+                <button class="file-button" onclick="downloadFile(${index})">${file.name}</button>
+            `;
+            container.appendChild(listItem);
+        });
+    }
+
+    function downloadFile(index) {
+        // Retrieve stored files
+        const storedFiles = JSON.parse(localStorage.getItem(localStorageKey)) || [];
+
+        // Create a data URI from the Base64 data
+        const dataUri = storedFiles[index].data;
+
+        // Create a download link and trigger the download
+        const link = document.createElement('a');
+        link.href = dataUri;
+        link.download = storedFiles[index].name;
+        document.body.appendChild(link);
+        link.click();
+
+        // Clean up
+        document.body.removeChild(link);
+    }
+
+    // Initial display of past uploaded files
+    displayFileList(document.getElementById('file-list'));
+</script>
+
+
+
+<!--DOWNLOAD BUTTON-->
+<h1>Download a File</h1>
+<button id="downloadButton">Download PDF File</button>
+
+<script>
+    document.getElementById('downloadButton').addEventListener('click', function () {
+       
+        var fileUrl = 'Study Guide 2023- CW412_20230714_2343.pdf';
+
+        var a = document.createElement('a');
+        a.href = fileUrl;
+        a.download = 'Study Guide 2023- CW412_20230714_2343.pdf';
+        a.style.display = 'none';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+    });
+</script>
+
+       </td>
+    </th>
+
+    <th>
+        <td>
+           <img src="stright.jpg" alt="">  
+        </td>
+    </th>
+  </table>
+</section><div class="box">
+    <div class="card">
+        <div class="imgBox">
+           <a href="study guide.html"> <img src="book (4).png" alt="some image"></a>
+        </div>
+        <div class="details">
+            <h2>Study Guide <br</h2>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="imgBox">
+            <a href="computer arc.html"> <img src="computer.png" alt="some image"></a>
+        </div>
+        <div class="details">
+            <h2>Computer Architecture </h2>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="imgBox">
+           <a href="robotics.html"><img src="robot.png" alt="some image"></a>
+        </div>
+        <div class="details">
+            <h2>Robotics </h2>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="imgBox">
+            <a href="Ethics.html"> <img src="balance-scale.png" alt="some image"></a>
+        </div>
+        <div class="details">
+            <h2>Ethics</h2>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <h3 style="text-align: center;">Runtime Terror &trade;</h3>
+  </footer>
+  
+</body>
+</html>
