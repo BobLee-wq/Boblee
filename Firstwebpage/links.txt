@@ -1,4 +1,0 @@
-"https://source.unsplash.com/1600x900/?nature,water" alt="water"
-@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed') 
-
-https://source.unsplash.com/De8wMYoSSBc
